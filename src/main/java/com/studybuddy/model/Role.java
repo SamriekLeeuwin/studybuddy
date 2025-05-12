@@ -24,7 +24,7 @@ public enum Role {
     }
 
     /**
-     * Checks if this role has sufficient permissions to perform actions requiring a certain role.
+     * Checks if this role has  permissions to perform actions requiring a certain role.
      */
     public boolean hasPermission(Role requiredRole) {
         return this.priority <= requiredRole.getPriority();
