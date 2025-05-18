@@ -20,7 +20,7 @@ import java.util.Collections;
 @RequestMapping("/auth")
 public class AuthController {
 
-    @Autowiredr
+    @Autowired
     AuthenticationManager authenticationManager;
 
     @Autowired
@@ -43,7 +43,7 @@ public class AuthController {
 
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@RequestBody SignupRequest signUpRequest) {
-        if (userRepository.existsByUsername((signUpRequest.getUsername())){
+        if (userRepository.existsByUsername((signUpRequest.getUsername()))){
             return ResponseEntity.badRequest().body("Username is already taken!");
         }
 
